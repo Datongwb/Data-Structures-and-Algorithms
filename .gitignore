@@ -1,0 +1,115 @@
+# ========================================
+# Java
+# ========================================
+
+# Java 编译文件
+*.class
+*.jar
+*.war
+*.ear
+
+# Java 构建目录
+target/
+build/
+out/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+
+# ========================================
+# Python
+# ========================================
+
+# Python 字节码和缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# Python 打包文件
+build/
+dist/
+*.egg-info/
+
+# 测试和类型检查缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook 临时文件
+.ipynb_checkpoints/
+
+
+# ========================================
+# C
+# ========================================
+
+# C 编译产物
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+# 可执行文件（无扩展名，按需使用）
+# a.out
+
+# CMake 构建目录
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile.generated
+
+
+# ========================================
+# IDE / Editor
+# ========================================
+
+# IntelliJ IDEA
+.idea/
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+
+# ========================================
+# Operating System
+# ========================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux 临时文件
+*~
+
+# ========================================
+# Temporary files
+# ========================================
+
+*.tmp
+*.temp
+*.swp
+*.bak
