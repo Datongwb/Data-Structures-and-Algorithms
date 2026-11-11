@@ -32,7 +32,6 @@ Data-Structures-and-Algorithms/
 ├── 12-DynamicProgramming/     # 动态规划
 ├── 13-String/                 # 字符串
 │
-├── Notes/                     # 学习笔记
 ├── .gitignore
 └── README.md
 ```
@@ -78,6 +77,27 @@ Data-Structures-and-Algorithms/
 | Python | 快速实现算法与验证思路 |
 | C | 理解底层数据结构与内存操作 |
 
+## ⚙️ C 代码命名与运行约定
+
+> 适用环境：Windows + VS Code + MinGW-w64（GDB 8.1）
+
+1. **C 源文件名必须使用纯 ASCII 字符（英文或拼音）**，例如 `01-guanyanshui.c` 而不是 `01-挂盐水.c`。
+   中文可以写在文件头注释和 `printf` 字符串里，不受影响。
+2. 原因是 Windows 版 GDB 8.1 只按系统 ANSI（中文系统为 GBK）编码解析路径，
+   而 VS Code 以 UTF-8 传递路径。文件名含中文时编译能成功，但调试会报：
+   `Unable to start debugging. Program path ... is missing or invalid` 或
+   `No such file or directory`。
+3. 运行 exe 时先进入 exe 所在目录，PowerShell 中需加 `.\` 前缀：
+
+   ```powershell
+   cd 00-clgo
+   .\01-guanyanshui.exe
+   ```
+
+4. 若确实需要使用中文文件名，可升级到支持 UTF-8 路径的新版 GDB（如 MSYS2 的
+   `mingw-w64-gcc` 13+），或开启 Windows 的“Beta: 使用 Unicode UTF-8 提供全球语言支持”，
+   但推荐直接使用 ASCII 文件名，最省事。
+
 ## 📝 Problem Records
 
 每道题尽量记录以下内容：
@@ -102,6 +122,7 @@ Data-Structures-and-Algorithms/
 | Date | Update |
 |---|---|
 | 2026-10-31 | Initialize the repository |
+| 2026-11-06 | 修复中文文件名导致 VS Code 调试失败的问题，统一 C 源文件命名约定 |
 
 ---
 
